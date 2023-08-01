@@ -1,6 +1,12 @@
 #ifndef ADDNEWCOLOR_H
 #define ADDNEWCOLOR_H
 
+#include <json.hpp>
+#include <fstream>
+#include "iostream"
+#include "ostream"
+using json = nlohmann::json;
+
 #include <QDialog>
 
 namespace Ui {

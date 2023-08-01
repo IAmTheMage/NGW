@@ -1,3 +1,16 @@
 {
-
+    "colors": [
+        {
+            "data": [],
+            "name": "Ciano"
+        },
+        {
+            "data": [],
+            "name": "Magenta"
+        },
+        {
+            "data": [],
+            "name": "Amarelo"
+        }
+    ]
 }

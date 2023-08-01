@@ -322,9 +322,24 @@ border: none;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: none;
-background: #333138;
-color: white;</string>
+      <string notr="true">QListView {
+	border: none;
+	background: #333138;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+};
+
+QListView::item {
+          margin-top: 15px;
+};
+
+QListView::item:selected {
+            background-color: white;
+			  color: #333138;
+}
+
+</string>
      </property>
     </widget>
     <widget class="QFrame" name="ColorsConfigFrame">

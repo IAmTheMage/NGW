@@ -1,6 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "iostream"
+#include <QListView>
+#include <QStringListModel>
+#include <QStringList>
+#include "QString"
+#include <QListWidgetItem>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,10 +14,47 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setStyleSheet("background-color: #333138;");
-    this->ui_definitions();
+
+
+
+    std::ifstream f("../NGW/colors.json");
+    QStringList qstrings;
+
+    json colors_config = json::parse(f);
+    f.close();
+    for(auto data : colors_config["colors"]) {
+        QString newItemText = QString::fromStdString(data["name"]);
+        qstrings << newItemText;
+    }
+    QStringListModel* model = new QStringListModel(this);
+    model->setStringList(qstrings);
+    ui->ColorsList->setModel(model);
+    ui->selectColorsFrame->show();
+
+    QString styleSheet = R"(
+            QListView {
+                border: none;
+                background: #333138;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            QListView::item {
+                margin-top: 15px;
+            }
+
+            QListView::item:selected {
+                background-color: white;
+                color: #333138;
+            }
+        )";
+
+    ui->ColorsList->setStyleSheet(styleSheet);
+
+
     this->setCallbacks();
-
-
+    this->ui_definitions();
 }
 
 MainWindow::~MainWindow()
@@ -34,7 +77,8 @@ void MainWindow::on_camera_btn_clicked() {
 }
 
 void MainWindow::on_select_colors_btn_clicked() {
-    ui->selectColorsFrame->show();
+     ui->selectColorsFrame->show();
+
 }
 
 void MainWindow::on_add_new_color_btn_clicked() {
@@ -43,6 +87,7 @@ void MainWindow::on_add_new_color_btn_clicked() {
     connect(&newColorDialog, &AddNewColor::confirmedButtonPressed, this, &MainWindow::on_confirm_new_color);
     newColorDialog.setWindowTitle("Nova cor");
     newColorDialog.exec();
+
 }
 
 void MainWindow::on_cancel_new_color() {
@@ -50,5 +95,39 @@ void MainWindow::on_cancel_new_color() {
 }
 
 void MainWindow::on_confirm_new_color() {
+    std::ifstream f("../NGW/colors.json");
+    QStringList qstrings;
 
+    json colors_config = json::parse(f);
+    for(auto data : colors_config["colors"]) {
+        QString newItemText = QString::fromStdString(data["name"]);
+        qstrings << newItemText;
+    }
+    QStringListModel* model = new QStringListModel(this);
+    model->setStringList(qstrings);
+    ui->ColorsList->setModel(model);
+    QString styleSheet = R"(
+            QListView {
+                border: none;
+                background: #333138;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            QListView::item {
+                margin-top: 15px;
+            }
+
+            QListView::item:selected {
+                background-color: white;
+                color: #333138;
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        )";
+
+    ui->ColorsList->setStyleSheet(styleSheet);
+    ui->selectColorsFrame->show();
 }

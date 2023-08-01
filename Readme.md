@@ -43,6 +43,14 @@ NGW stands for New Game Window, created to replace the previous version based on
     - [Visuals](#game-visuals)
 
 
+## Colors Section
+
+- ## Colors Function
+    This page is used to create new colors, edit existing colors before the game, factors such as lighting can influence these aspects.
+
+- ## Colors Visuals
+    
+
 ## Doubts
 
 One of the major issues with the old Game Window's functionality was the lack of documentation regarding its own bugs and existing problems. This is expected to be addressed in this new implementation; however, as no software is exempt from them, this implementation may also have some bugs. As I am yet unsure where to document them, I will leave it open for now. Nonetheless, two possibilities come to mind: documenting the errors via Trello or documenting the errors directly here on Github.
