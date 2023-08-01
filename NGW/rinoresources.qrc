@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>color_pallete.svg</file>
+    <file>field.svg</file>
+    <file>filter.svg</file>
+    <file>newColor.svg</file>
+    <file>perspective.svg</file>
+    <file>robots.svg</file>
+    <file>camera.svg</file>
+  </qresource>
+  <qresource prefix="config">
+    <file>colors.json</file>
+  </qresource>
+</RCC>

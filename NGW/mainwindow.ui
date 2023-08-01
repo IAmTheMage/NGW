@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1174</width>
+    <height>778</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="leftContainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>127</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QFrame" name="cameraFrame">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="cameraButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>89</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/camera.svg</normaloff>:/icons/camera.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="robotsFrame">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="robotsButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>89</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/robots.svg</normaloff>:/icons/robots.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="colorFrame">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="colorButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>24</y>
+          <width>89</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/color_pallete.svg</normaloff>:/icons/color_pallete.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="perspectiveFrame">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="perspectiveButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>89</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/perspective.svg</normaloff>:/icons/perspective.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="filterFrame">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="filterButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>24</y>
+          <width>89</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/filter.svg</normaloff>:/icons/filter.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="filterFrame_2">
+       <property name="styleSheet">
+        <string notr="true">border: none;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="filterButton_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>24</y>
+          <width>89</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #333138;
+border: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="rinoresources.qrc">
+          <normaloff>:/icons/field.svg</normaloff>:/icons/field.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="selectColorsFrame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>991</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="ColorsTitle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="text">
+      <string>Cor</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QListView" name="ColorsList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>161</width>
+       <height>541</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background: #333138;
+color: white;</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="ColorsConfigFrame">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>350</y>
+       <width>504</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QFrame" name="HueFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="HueLabel">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Hue</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MinHueFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="MinHueLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>min</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MinHueSlider">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MinHueFrame_2">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="MaxHueLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>max</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MinHueSlider_2">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="HueInput">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid white;
+color: white;
+text-align:center;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="SaturationFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="SaturationLabel">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Saturation</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MinSaturationFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="MinSaturationLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>min</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MinSaturationSlider">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MaxSaturationFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="MaxSaturationLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>max</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MaxSaturationSlider">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="SaturationInput">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid white;
+color: white;
+text-align:center;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="ValueFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="ValueLabel">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Value</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MinValueFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="MinValueLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>min</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MinValueSlider">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="MaxValueFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="MaxValueLabel">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: white;
+}</string>
+              </property>
+              <property name="text">
+               <string>max</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MaxValueSlider">
+              <property name="styleSheet">
+               <string notr="true">QSlider::groove:horizontal {
+    background: #ff312e; /* Fundo branco antes do slider */
+    height: 8px;
+    border: none; /* Remova a borda da groove */
+}
+
+QSlider::add-page:horizontal {
+    background: white; /* Cor desejada após o slider */
+}
+
+QSlider::handle:horizontal {
+    background: #ff312e; /* Cor do puxador do slider (branco) */
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 3px;
+}</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ValueInput">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid white;
+color: white;
+text-align:center;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>430</y>
+       <width>126</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QRadioButton" name="HSVSelect">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    border: 2px solid white; /* Cor da borda quando selecionado */
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QRadioButton::indicator:checked {
+	border: 2px solid #ff312e; 
+    background-color: #ff312e; /* Cor do preenchimento quando selecionado */
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: white; /* Cor do preenchimento quando não selecionado */
+}
+
+QRadioButton {
+    color: white; /* Cor do texto (label) */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>HSV</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    border: 2px solid white; /* Cor da borda quando selecionado */
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QRadioButton::indicator:checked {
+	border: 2px solid #ff312e; 
+    background-color: #ff312e; /* Cor do preenchimento quando selecionado */
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: white; /* Cor do preenchimento quando não selecionado */
+}
+
+QRadioButton {
+    color: white; /* Cor do texto (label) */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>LAB</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="AddNewColorButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>580</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FF312E;
+border: none;
+font-weight: bold;
+color: white;
+
+width: 64px;
+height: 64px;
+
+border-radius: 32px;</string>
+     </property>
+     <property name="text">
+      <string>Adicionar nova cor</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1174</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="rinoresources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
