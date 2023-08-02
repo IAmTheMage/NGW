@@ -7,6 +7,10 @@
 #include "addnewcolor.h"
 #include <fstream>
 #include <json.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <QImage>
+#include <QPixmap>
 using json = nlohmann::json;
 
 QT_BEGIN_NAMESPACE

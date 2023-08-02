@@ -27,5 +27,9 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+INCLUDEPATH += /usr/local/include/opencv2/
+LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs
+
+
 RESOURCES += \
     rinoresources.qrc

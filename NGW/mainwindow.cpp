@@ -29,6 +29,19 @@ MainWindow::MainWindow(QWidget *parent)
     QStringListModel* model = new QStringListModel(this);
     model->setStringList(qstrings);
     ui->ColorsList->setModel(model);
+    cv::Mat img = cv::imread("../NGW/RinobotLogo.png");
+    if (img.empty())
+    {
+        // Tratamento de erro, a imagem não pôde ser carregada
+        return;
+    }
+
+    // Converter a imagem OpenCV para QImage
+    QImage image1 = QImage((uchar*)img.data, img.cols, img.rows, img.step, QImage::Format_RGB888);
+
+    // Exibir a imagem na interface gráfica
+    ui->EditColorImagePixMap->setPixmap(QPixmap::fromImage(image1));
+    ui->EditColorImagePixMap->setScaledContents(true);
     ui->selectColorsFrame->show();
 
     QString styleSheet = R"(

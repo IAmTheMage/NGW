@@ -2,6 +2,7 @@
 #include "ui_addnewcolor.h"
 #include "QString"
 
+
 AddNewColor::AddNewColor(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddNewColor)

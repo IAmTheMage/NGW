@@ -868,9 +868,9 @@ QRadioButton {
     <widget class="QPushButton" name="AddNewColorButton">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>580</y>
-       <width>141</width>
+       <width>161</width>
        <height>41</height>
       </rect>
      </property>
@@ -894,6 +894,31 @@ border-radius: 32px;</string>
        <height>32</height>
       </size>
      </property>
+    </widget>
+    <widget class="QFrame" name="EditColorCameraFrame">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>511</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="EditColorImagePixMap">
+        <property name="text">
+         <string>Placeholder</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
   </widget>
